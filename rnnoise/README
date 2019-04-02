@@ -5,13 +5,10 @@ To compile, just type:
 % ./configure
 % make
 
-Optionally:
-% make install
+Once compiled, you can remove noise from a .wav file using the following command:
 
-While it is meant to be used as a library, a simple command-line tool is
-provided as an example. It operates on RAW 16-bit (machine endian) mono
-PCM files sampled at 48 kHz. It can be used as:
+% ./remove_noise.sh <input_file> <output_file>
 
-./examples/rnnoise_demo input.pcm output.pcm
+For example:
 
-The output is also a 16-bit raw PCM file.
+% ./remove_noise.sh ../examples/before.wav ../examples/after_rnnoise.wav
